@@ -1,0 +1,253 @@
+:root {
+    /* 이미지에서 추출한 색상 및 크기 */
+    --header-height: 50px;
+    --detail-height: 120px; 
+    --list-width: 250px; 
+    --map-bg: #ffffff;
+    --list-bg: #ffffff; 
+    --detail-bg: #cccccc; /* 하단 상세 정보 영역 배경색 (회색) */
+    --header-bg: #e5f4f4; /* 상단 헤더 배경색 (매우 옅은 청록색) */
+    --follow-blue: #4a90e2; 
+    --followed-gray: #a0a0a0; /* 팔로우됨 버튼 회색 */
+    --selected-bg: #f8f8f8; 
+    --border-color: #e0e0e0;
+    --text-color: #333333;
+    --placeholder-color: #d9d9d9; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    color: var(--text-color);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
+
+body {
+    background-color: var(--map-bg);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    width: 100vw; 
+    background-color: white;
+}
+
+/* 1. 상단 헤더 스타일 */
+.header {
+    height: var(--header-height);
+    background-color: var(--header-bg); 
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.back-button {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 300; 
+    line-height: 0; 
+    padding-bottom: 5px;
+    color: #333;
+}
+
+.user-icon-placeholder {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--placeholder-color); 
+    border: 1px solid #aaa;
+}
+
+/* 2. 메인 콘텐츠 (지도 + 리스트) 스타일 */
+.main-content {
+    flex-grow: 1; 
+    display: flex;
+    overflow: hidden;
+}
+
+/* 2.1. 왼쪽 지도 영역 스타일 */
+.map-section {
+    flex-grow: 1; 
+    background-color: var(--map-bg); 
+    padding: 20px;
+    position: relative;
+}
+
+.map-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border: 2px dashed #939393; 
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.distance-item {
+    display: flex;
+    align-items: center;
+}
+
+.distance-item:first-child {
+    margin-bottom: 15px;
+}
+
+.dot-icon {
+    width: 10px; 
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.distance-item span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 2.2. 오른쪽 리스트 영역 스타일 */
+.list-section {
+    width: var(--list-width);
+    background-color: var(--list-bg);
+    overflow-y: auto; 
+    border-left: 1px solid var(--border-color);
+}
+
+.user-list {
+    list-style: none;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    height: 70px; 
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.list-item.selected {
+    background-color: var(--selected-bg);
+}
+
+.profile-thumb {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--placeholder-color);
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.nickname {
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+.follow-button {
+    background-color: var(--follow-blue);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    height: 25px;
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+
+/* 팔로우됨 상태 스타일 */
+.follow-button.followed {
+    background-color: var(--followed-gray);
+    color: white;
+}
+
+/* 3. 하단 상세 정보 영역 스타일 */
+.detail-section {
+    background-color: var(--detail-bg); /* 회색 배경 */
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 15px 25px; /* 이미지에 맞게 패딩 조정 */
+    transition: all 0.3s ease-in-out; 
+    overflow: hidden; /* 숨겨진 상태에서 내용이 넘치지 않도록 */
+}
+
+/* 이미지에 보이는 왼쪽 프로필 썸네일 */
+.detail-profile-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--placeholder-color);
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-line {
+    margin: 3px 0;
+    font-size: 15px;
+    color: #000000; /* 텍스트 색상 검은색으로 */
+}
+
+.detail-line strong {
+    font-weight: bold;
+    color: #000000;
+    margin-right: 5px;
+}
+
+/* 초기 상태 (클릭 전) - 숨김 */
+.detail-section.hidden {
+    height: 0; 
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 클릭 후 - 보임 */
+.detail-section:not(.hidden) {
+    height: var(--detail-height);
+    opacity: 1;
+    visibility: visible;
+}
+
+.detail-section:not(.hidden) {
+    height: var(--detail-height);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ---------------------------------------------------- */
+/* [카카오 지도 관련 스타일 추가] */
+/* ---------------------------------------------------- */
+/* 맵 컨테이너가 부모(.map-section) 영역을 꽉 채우도록 설정 */
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* 지도 섹션의 절대 위치를 차지하도록 설정 */
+    top: 0;
+    left: 0;
+    z-index: 1; /* 다른 UI 요소보다 아래에 있도록 설정 (map-controls가 z-index 10으로 위에 있습니다) */
+}

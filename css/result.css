@@ -1,0 +1,109 @@
+  body {
+      margin: 0;
+      font-family: "Pretendard", Arial, sans-serif;
+    }
+
+    header {
+      background-color: #d6e6de;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* 홈 버튼 디자인 */
+    .home-btn {
+      width: 36px;
+      height: 36px;
+      position: relative;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* 집 모양 (삼각형 + 사각형) */
+    .home-btn::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 26px;
+      height: 20px;
+      background-color: #000;
+      clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0 100%, 0 40%);
+      transition: background-color 0.2s;
+    }
+
+    .home-btn:hover::before {
+      background-color: #333;
+    }
+
+    .profile {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #ccc;
+    }
+
+    main {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 20px;
+    }
+
+      .hobby-list {
+      margin: 20px 0;
+      text-align: left;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    
+    .hobby-item {
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hobby-item:hover {
+      background-color: #f0f0f0;
+      border-color: #4CAF50;
+    }
+    
+    .hobby-item input[type="radio"] {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    .hobby-item label {
+      cursor: pointer;
+      flex: 1;
+      font-size: 18px;
+    }
+    
+    .save-btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .save-btn:hover {
+      background-color: #45a049;
+    }
+    
+    .save-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }

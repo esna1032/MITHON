@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: "맑은 고딕", sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  /* 상단바 */
+  .header {
+    background-color: #d7e9df;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #bbb;
+  }
+
+  .home-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .home-btn img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+
+  /* 채팅 영역 */
+  .chat-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* 하단 입력창 */
+  .input-area {
+    background-color: #d7e9df;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #bbb;
+  }
+
+  .input-area input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .input-area input::placeholder {
+    color: #777;
+  }
+
+  .input-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .input-icons img {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+  }
+
+/* ------------------------------------------- */
+/* ✅ 채팅 버블 및 정렬 스타일 (오른쪽 정렬 핵심) */
+/* ------------------------------------------- */
+
+/* 전체 메시지 컨테이너 (정렬용) */
+.message-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+/* 상대방 메시지 컨테이너 (왼쪽 정렬) */
+.other-message-container {
+    justify-content: flex-start;
+}
+
+/* ⚠️ 내 메시지 컨테이너 (오른쪽 정렬) */
+.my-message-container {
+    flex-direction: row-reverse; /* [시간] [메시지] 순서로 배치 */
+}
+
+/* 상대방 프로필 썸네일 */
+.chat-profile-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc; 
+    flex-shrink: 0;
+}
+
+/* 메시지 버블 */
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+    font-size: 15px;
+    word-break: break-word;
+    color: #333;
+}
+
+/* 상대방 메시지 스타일 */
+.other-message {
+    background-color: #ffffff; 
+    border: 1px solid #d7e9df;
+    border-bottom-left-radius: 2px;
+}
+
+/* 내 메시지 스타일 */
+.my-message {
+    background-color: #d7e9df; 
+    border-bottom-right-radius: 2px;
+}
+
+/* 시간 */
+.timestamp {
+    font-size: 10px;
+    color: #888;
+    align-self: flex-end;
+    white-space: nowrap;
+}
+
+/* 상대방 메시지 그룹 (프로필 옆) */
+.other-message-container > .message-content-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}

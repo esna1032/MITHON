@@ -1,0 +1,71 @@
+ body {
+      background-color: #b0b4b1;
+      font-family: "Noto Sans KR", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #b0b4b1;
+      width: 420px; /* 줄임 */
+      padding: 20px 25px;
+      border-radius: 10px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+    input {
+      width: 65%;
+      height: 32px; /* 작게 */
+      border-radius: 20px;
+      border: none;
+      padding: 0 12px;
+      margin-top: 4px;
+      outline: none;
+      font-size: 14px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn {
+      background: #d1d1d1;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 12px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .btn:hover {
+      background: #c0c0c0;
+    }
+    .msg {
+      margin-left: 6px;
+      font-size: 13px;
+    }
+    .msg.ok { color: green; }
+    .msg.error { color: red; }
+    .submit-btn {
+      background-color: #3b5eff;
+      color: white;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #2f4de0;
+    }

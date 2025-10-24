@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맵 프로필</title>
+    <link rel="stylesheet" href="../css/map.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06769108d282769a859a848daf5900a9"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button class="back-button">←</button>
+            <div class="user-icon-placeholder"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="map-section">
+                <div id="map"></div> 
+                
+                <div class="map-controls">
+                    <div class="distance-item">
+                        <div class="dot-icon"></div>
+                        <span>100m</span>
+                    </div>
+                    <div class="distance-item">
+                        <div class="dot-icon"></div>
+                        <span>3km</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-section">
+                <ul class="user-list" id="userList">
+                    <li class="list-item" data-nickname="이미림" data-hobby="디자인 하기" data-address="서울특별시 성동구 성수동 1가" data-lat="37.5456" data-lng="127.0588">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">이미림</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="박수민" data-hobby="디자인 하기" data-address="서울특별시 성동구 성수동 2가" data-lat="37.5470" data-lng="127.0520">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">박수민</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="김철수" data-hobby="디자인 하기" data-address="경기도 수원시 영통구" data-lat="37.2635" data-lng="127.0286">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="이영희" data-hobby="독서" data-address="부산광역시 해운대구" data-lat="35.1796" data-lng="129.0756">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="박민준" data-hobby="여행" data-address="대구광역시 수성구" data-lat="35.8722" data-lng="128.6014">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="최지우" data-hobby="베이킹" data-address="인천광역시 연수구" data-lat="37.4563" data-lng="126.7052">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="정재현" data-hobby="게임" data-address="광주광역시 서구" data-lat="35.1595" data-lng="126.8526">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="한예슬" data-hobby="요가" data-address="대전광역시 유성구" data-lat="36.3510" data-lng="127.3850">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="윤도현" data-hobby="등산" data-address="울산광역시 남구" data-lat="35.5384" data-lng="129.3114">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                    <li class="list-item" data-nickname="신혜선" data-hobby="그림 그리기" data-address="세종특별자치시" data-lat="36.5042" data-lng="127.2494">
+                        <div class="profile-thumb"></div>
+                        <span class="nickname">닉네임</span>
+                        <button class="follow-button">팔로우</button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="detail-section hidden" id="detailSection"> 
+            <div class="detail-profile-thumb"></div> 
+            <div class="detail-content">
+                <p class="detail-line"><strong>닉네임:</strong> <span id="detailNickname"></span></p>
+                <p class="detail-line"><strong>현재 취미:</strong> <span id="detailHobby"></span></p>
+                <p class="detail-line"><strong>주소:</strong> <span id="detailAddress"></span></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../node/map.js"></script>
+    <script>
+        const backButton = document.querySelector('.back-button');
+        backButton.addEventListener('click', () => {
+            window.location.href = 'main2.html';
+        });
+    </script>
+</body>
+</html>

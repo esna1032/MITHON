@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Match mood - 로그인</title>
   <link rel="stylesheet" href="../css/login.css" />
-
 </head>
 <body>
   <div class="container">
-    <div class="logo-area">로고 자리</div>
+    <!-- 왼쪽 로고 -->
+    <div class="logo-area">
+      <img src="../img/white.png" alt="Match mood 로고" />
+    </div>
 
+    <!-- 로그인 박스 -->
     <div class="login-box">
       <h1>Match mood</h1>
       <input type="text" id="userid" placeholder="아이디" />
       <br />
       <input type="password" id="password" placeholder="비밀번호" />
       <br />
-      <button onclick="login()" id="loginBtn">로그인</button>
+      <button onclick="login()">로그인</button>
 
       <div id="error-message" class="error" style="display: none;">
         잘못된 비밀번호입니다. 다시 입력해주세요.
@@ -25,11 +28,10 @@
 
       <div class="links">
         <p><a href="password.html" class="forgot-link">비밀번호를 잊으셨나요?</a></p>
-        <p>계정이 없으신가요? <a href="pr2.html">가입하기</a></p>
+        <p>계정이 없으신가요? <a href="../html/signup.html">가입하기</a></p>
+        <script src="../node/login.js"></script>
       </div>
     </div>
   </div>
-
-  <script src="node/login.js"></script>
 </body>
 </html>

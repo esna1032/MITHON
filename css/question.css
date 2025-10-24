@@ -1,0 +1,83 @@
+.submit-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 30px auto;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+
+  body {
+    margin: 0;
+    font-family: "맑은 고딕", sans-serif;
+    background-color: #f5f8f6;
+  }
+
+  /* 상단 바 */
+  header {
+    background-color: #cfe3d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* 클릭 가능 표시 */
+  }
+
+  .home-icon {
+    background: url('https://cdn-icons-png.flaticon.com/512/25/25694.png') no-repeat center;
+    background-size: 70%;
+  }
+
+  .profile-icon {
+    background: url('https://cdn-icons-png.flaticon.com/512/847/847969.png') no-repeat center;
+    background-size: 70%;
+  }
+
+  /* 본문 */
+  main {
+    padding: 25px 30px;
+  }
+
+  .question {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+
+  input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 15px;
+    padding: 10px;
+  }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>성격유형 검사</title>
+<link rel="stylesheet" href="../css/question.css">
+</head>
+<body>
+  <header>
+    <div class="icon home-icon" onclick="location.href='main.html'"></div>
+    <div class="icon profile-icon"></div>
+  </header>
+
+  <main>
+    <div class="question">
+      <p>1. 사람들과 함께 있을 때 에너지가 생기고 기분이 좋아진다.</p>
+      <label><input type="radio" name="q1" value="yes"> 예</label>
+      <label><input type="radio" name="q1" value="no"> 아니오</label>
+    </div>
+
+    <div class="question">
+      <p>2. 세세한 사실보다 전체적인 흐름이나 아이디어에 더 관심이 간다.</p>
+      <label><input type="radio" name="q2" value="yes"> 예</label>
+      <label><input type="radio" name="q2" value="no"> 아니오</label>
+    </div>
+
+    <div class="question">
+      <p>3. 상황을 판단할 때 감정보다 논리를 우선시하는 편이다.</p>
+      <label><input type="radio" name="q3" value="yes"> 예</label>
+      <label><input type="radio" name="q3" value="no"> 아니오</label>
+    </div>
+
+    <div class="question">
+      <p>4. 계획을 세워두면 마음이 편하고 안정감을 느낀다.</p>
+      <label><input type="radio" name="q4" value="yes"> 예</label>
+      <label><input type="radio" name="q4" value="no"> 아니오</label>
+    </div>
+
+    <div class="question">
+      <p>5. 당신이 가장 편안함을 느끼는 상황은 어떤 때인가요?</p>
+      <textarea id="q5" placeholder="자유롭게 작성해주세요"></textarea>
+    </div>
+
+    <!-- 제출 버튼 -->
+    <button class="submit-btn" id="submitBtn">제출</button>
+  </main>
+  
+  <script src="../node/question.js"></script>
+</body>
+</html>
